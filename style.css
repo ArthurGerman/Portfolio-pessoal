@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    color: var(--font_color);
+}
+
+:root{ /* o grupo ':root' serve para definir variáveis globais(podem ser acessadas por todo o documento) que serão usadas adiante. Podendo aplicar elementos html, servindo como a raiz do documento.*/
+    --gradiente_escuro: linear-gradient(45deg, rgb(209, 0, 0), rgb(146, 146, 146), rgb(39, 39, 39));
+    --gradiente_claro: linear-gradient(45deg, rgb(169, 169, 169), rgb(215, 215, 215), rgb(213, 206, 206));
+    --white: white;
+    --blue: rgba(34, 110, 147, 1);
+}
+
+
+body{
+    background: var(--bg);
+    background-size: 5000% 400%;
+    animation: degrade-animado 5s infinite alternate;
+}
+
+@keyframes degrade-animado{ /* Efeito de degradê animado */
+    0%{
+        background-position-x: 0% ;
+    }
+    100%{
+        background-position-x: 100% ;
+    }
+} 
+
+.tema_claro{
+    --bg: var(--gradiente_claro);
+    --font_color: var(--blue);
+}
+
+.tema_escuro{
+    --bg: var(--gradiente_escuro);
+    --font_color: var(--white);
+}
+
